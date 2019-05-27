@@ -80,7 +80,6 @@ namespace DAL
                     shoe .Add( GetInfor(reader));
                 }
             DBHelper.CloseConnection();
-
             return shoe;
             
         }

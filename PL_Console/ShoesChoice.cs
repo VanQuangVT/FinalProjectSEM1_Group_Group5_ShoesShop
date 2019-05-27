@@ -6,9 +6,9 @@ namespace PL_Console
 {
     public class ShoesChoice
     {
-        
 
-        public   void ManagerShoe()
+
+        public void ManagerShoe()
         {
             Menu m = new Menu();
             Console.WriteLine("============================");
@@ -21,25 +21,25 @@ namespace PL_Console
             Console.WriteLine("============================");
             Console.Write("Nhập lựa chọn của bạn:");
             // luachon = Convert.ToInt16(Console.ReadLine());
-             while (true)
+            while (true)
+            {
+                bool isINT = Int32.TryParse(Console.ReadLine(), out luachon);
+                if (!isINT)
                 {
-                    bool isINT = Int32.TryParse(Console.ReadLine(), out luachon);
-                    if (!isINT)
-                    {
-                        Console.WriteLine("Giá trị sai vui lòng nhập lại.");
-                        Console.Write("Nhập lựa chọn của bạn : ");
-                    }
-                    else if (luachon < 0 || luachon > 2)
-                    {
-                        Console.WriteLine("Giá trị sai vui lòng nhập lại từ 0 đến 2. ");
-                        Console.Write("Nhập lựa chọn của bạn : ");
-                    }
-    
-                    else
-                    {
-                        break;
-                    }
+                    Console.WriteLine("Giá trị sai vui lòng nhập lại.");
+                    Console.Write("Nhập lựa chọn của bạn : ");
                 }
+                else if (luachon < 0 || luachon > 2)
+                {
+                    Console.WriteLine("Giá trị sai vui lòng nhập lại từ 0 đến 2. ");
+                    Console.Write("Nhập lựa chọn của bạn : ");
+                }
+
+                else
+                {
+                    break;
+                }
+            }
             switch (luachon)
             {
                 case 1:
@@ -71,39 +71,32 @@ namespace PL_Console
                     {
                         Console.WriteLine("không đc để trống");
                     }
-                    
+
                 } while (shoe.Shoe_Name == "" || shoe.Shoe_Name == " ");
-            
-            Console.Write("Nhập Size giày:");
-            shoe.Size = Convert.ToInt16(Console.ReadLine());
-              while (shoe.Size <0)
-              {
-                   
-    
-                   if (shoe.Size <0 )
-                   {
-                       Console.WriteLine("Size không được số âm");
-                   }
-                  
-                    
-                    // try
-                    // {
-                    //     shoe.Size = Convert.ToInt16(Console.ReadLine());
-                    // }
-                    // catch (System.Exception)
-                    // {
-                        
-                    //     Console.WriteLine("Bạn nhập sai cú pháp Size giày nhỏ hơn hoặc nhập kí tự");
 
-                    
-                        
-                   
-                    // }
-              }
-                
-                  
+                Console.Write("Nhập Size giày:");
+                shoe.Size = Convert.ToInt16(Console.ReadLine());
+                while (shoe.Size < 0)
+                {
 
-               
+
+                    if (shoe.Size < 0)
+                    {
+                        Console.WriteLine("Size không được số âm");
+                    }
+
+
+
+
+
+
+
+
+                }
+
+
+
+
                 do
                 {
                     Console.Write("Nhập số lượng");
@@ -112,7 +105,7 @@ namespace PL_Console
                     {
                         Console.WriteLine("Số lượng không được phép nhỏ hơn không!");
                     }
-                    
+
 
                 } while (shoe.NumberOfShoe < 0);
                 Console.Write("Description:");
@@ -125,7 +118,7 @@ namespace PL_Console
                     {
                         Console.WriteLine("Giá sản phẩm không được nhỏ hơn 1000");
                     }
-                   
+
                 } while (shoe.Price < 1000);
                 shoelb.CreateShoe(shoe.Shoe_ID, shoe.Shoe_Name, shoe.Size, shoe.NumberOfShoe, shoe.Description, shoe.Price);
 
@@ -152,7 +145,7 @@ namespace PL_Console
 
             }
         }
-        public  void UpdateShoe()
+        public void UpdateShoe()
         {
             ShoeBL shoelb = new ShoeBL();
             Shoes shoe = new Shoes();
@@ -227,89 +220,88 @@ namespace PL_Console
             }
 
 
-        // }
-        //    public void DisplayShoe()
-        // {
-        //     Console.Clear();
-        //     ShoeBL shoe = new ShoeBL();
-        //     List<Shoes> list = shoe.GetShoe();
-        //     Menu shoemenu = new Menu();
-        //     var table = new ConsoleTable("ID", "Tên giày", "Kích cỡ", "Số lượng","Miêu tả","Giá sản phẩm");
-        //     foreach (Shoes sho in list)
-        //     {
-        //         table.AddRow(sho.Shoe_ID,sho.Shoe_Name,sho.Size,sho.NumberOfShoe,sho.Description,sho.Price);
-        //     }
-        //     table.Write();
-        //     Console.WriteLine();
+            }
+            //    public void DisplayShoe()
+            // {
+            //     Console.Clear();
+            //     ShoeBL shoe = new ShoeBL();
+            //     List<Shoes> list = shoe.GetShoe();
+            //     Menu shoemenu = new Menu();
+            //     var table = new ConsoleTable("ID", "Tên giày", "Kích cỡ", "Số lượng","Miêu tả","Giá sản phẩm");
+            //     foreach (Shoes sho in list)
+            //     {
+            //         table.AddRow(sho.Shoe_ID,sho.Shoe_Name,sho.Size,sho.NumberOfShoe,sho.Description,sho.Price);
+            //     }
+            //     table.Write();
+            //     Console.WriteLine();
 
-        //     while (true)
-        //     {
-        //         Console.Write("Nhấn Enter để tiếp tục");
-        //         string choice1;
-        //         choice1 = Console.ReadLine();
-        //         switch (choice1)
-        //         {
-        //             case "":
-        //                 {
-        //                     shoemenu.MenuChoice();
-        //                     break;
-        //                 }
-        //             default:
-        //                 {
-        //                     continue;
-        //                 }
-        //         }
-        //         break;
-
-        
-        //   string KtTenMatHang()
-        //         {
-        //             string kt;
-        //             int index;
-        //             while (true)
-        //             {
-        //                 index = -1;
-        //                 try
-        //                 {
-        //                     kt = Console.ReadLine();
-        //                 }
-        //                 catch (System.Exception)
-        //                 {
-        //                     Console.WriteLine("nhập lại:");
-        //                     continue;
-        //                 }
-        //                 if (kt == " ")
-        //                 {
-        //                     Console.Write("------------------------------------------------------------- ");
-        //                     Console.Write("\nKhông đc để trống!");
-        //                     Console.Write("\n------------------------------------------------------------- ");
-        //                     Console.Write("\nNhập lại đi:\a");
-        //                     continue;
-        //                 }
-        //                 for (int i = 0; i < kt.Length; i++)
-        //                 {
-        //                     if (kt[i] >= 65 && kt[i] <= 90 || kt[i] >= 97 && kt[i] <= 122)
-        //                     {
-        //                         index = 1;
-        //                         break;
-        //                     }
-        //                 }
-        //                 if (index == -1)
-        //                 {
-        //                     Console.Write("------------------------------------------------------------- ");
-        //                     Console.Write("\nKhông đc là số mà phải là chữ!");
-        //                     Console.Write("\n------------------------------------------------------------- ");
-        //                     Console.Write("\nNhập lại:");
-        //                     continue;
-        //                 }
-        //                 break;
-        //             }
-        //             return kt;
+            //     while (true)
+            //     {
+            //         Console.Write("Nhấn Enter để tiếp tục");
+            //         string choice1;
+            //         choice1 = Console.ReadLine();
+            //         switch (choice1)
+            //         {
+            //             case "":
+            //                 {
+            //                     shoemenu.MenuChoice();
+            //                     break;
+            //                 }
+            //             default:
+            //                 {
+            //                     continue;
+            //                 }
+            //         }
+            //         break;
 
 
+            //   string KtTenMatHang()
+            //         {
+            //             string kt;
+            //             int index;
+            //             while (true)
+            //             {
+            //                 index = -1;
+            //                 try
+            //                 {
+            //                     kt = Console.ReadLine();
+            //                 }
+            //                 catch (System.Exception)
+            //                 {
+            //                     Console.WriteLine("nhập lại:");
+            //                     continue;
+            //                 }
+            //                 if (kt == " ")
+            //                 {
+            //                     Console.Write("------------------------------------------------------------- ");
+            //                     Console.Write("\nKhông đc để trống!");
+            //                     Console.Write("\n------------------------------------------------------------- ");
+            //                     Console.Write("\nNhập lại đi:\a");
+            //                     continue;
+            //                 }
+            //                 for (int i = 0; i < kt.Length; i++)
+            //                 {
+            //                     if (kt[i] >= 65 && kt[i] <= 90 || kt[i] >= 97 && kt[i] <= 122)
+            //                     {
+            //                         index = 1;
+            //                         break;
+            //                     }
+            //                 }
+            //                 if (index == -1)
+            //                 {
+            //                     Console.Write("------------------------------------------------------------- ");
+            //                     Console.Write("\nKhông đc là số mà phải là chữ!");
+            //                     Console.Write("\n------------------------------------------------------------- ");
+            //                     Console.Write("\nNhập lại:");
+            //                     continue;
+            //                 }
+            //                 break;
+            //             }
+            //             return kt;
 
+
+
+
+        }
 
     }
-
-}
-}
