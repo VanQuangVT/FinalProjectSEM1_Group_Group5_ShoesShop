@@ -1,0 +1,12 @@
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\bin\Debug\netstandard2.0\DAL.deps.json
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\bin\Debug\netstandard2.0\Persistence.dll
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\bin\Debug\netstandard2.0\Persistence.pdb
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\obj\Debug\netstandard2.0\DAL.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\obj\Debug\netstandard2.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfoInputs.cache
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\obj\Debug\netstandard2.0\DAL.AssemblyInfo.cs
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\obj\Debug\netstandard2.0\DAL.csproj.CopyComplete
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\obj\Debug\netstandard2.0\DAL.dll
+C:\Users\admin\Desktop\FinalProjectSEM1_Group_Group5_ShoesShop\DAL\obj\Debug\netstandard2.0\DAL.pdb
